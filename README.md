@@ -26,9 +26,12 @@ Users should be able to:
 #### Desktop preview
 ![](./images/preview.png)
 #### Mobile screenshot
-![](./images/mobile-screenshot.png)
+
+![Mobile screenshot](./images/mobile-screenshot.png)
+
 #### Desktop screenshot
-![](./images/desktop-screenshot.png)
+
+![Desktop screenshot](./images/desktop-screenshot.png)
 
 ### Links
 
