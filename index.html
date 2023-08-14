@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <style>
+    :root {
+      /* Colors */
+      /*Primary*/
+      --Dark_cyan: hsl(158, 36%, 37%);
+      --Cream: hsl(30, 38%, 92%);
+      /*Neutral*/
+      --Very_dark_blue: hsl(212, 21%, 14%);
+      --Dark_grayish_blue: hsl(228, 12%, 48%);
+      --White: hsl(0, 0%, 100%);
+    }
+
+    main {
+      background-color: var(--Cream);
+    }
+
+    .card {
+      background-color: var(--White);
+    }
+
+    h1 {
+      font-family: 'Fraunces', serif;
+      color: var(--Very_dark_blue);
+      font-size: 20px;
+    }
+
+    h2  {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--Dark_grayish_blue);
+    }
+
+    p {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--Dark_grayish_blue);
+      font-size: 14px;
+    }
+
+    .newPrice {
+      font-family: 'Fraunces', serif;
+      color: var(--Dark_cyan);
+    }
+
+    .price {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--Dark_grayish_blue);
+    }
+
+    .btn {
+      font-family: 'Fraunces', serif;
+      background-color: var(--Dark_cyan);
+    }
+
+    .btn-text {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--White);
+      font-weight: bold;
+    }
+
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            'mobile': [
+              {'max': '1439px'}
+            ],
+            'desktop': '1440px'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <main class="h-screen flex justify-center items-center">
+      <div class="flex flex-col justify-center items-center">
+        <div class="card h-[610px] w-[345px] desktop:h-[450px] desktop:w-[600px] rounded-xl flex flex-col desktop:flex-row">
+          <div class="desktop:w-1/2">
+            <img class="h-[239px] rounded-t-xl w-full desktop:hidden"  src="./images/image-product-mobile.jpg" alt="Image product mobile">
+            <img class="desktop:rounded-l-xl w-full mobile:hidden"  src="./images/image-product-desktop.jpg" alt="Image product desktop">
+          </div>
+          <div class="py-[23px] px-[25px] desktop:w-1/2 desktop:py-[31px] desktop:px-[31px]">
+            <h2 class="uppercase text-[12px] tracking-[5px] desktop:tracking-[5px]">Perfume</h2>
+            <h1 class="pt-[11px] text-[32px] leading-[32px] desktop:pt-[19px] desktop:pl-[1px]">Gabrielle Essence Eau De Parfum</h1>
+            <p class="pt-[16px] desktop:pt-[24px] leading-[23px]">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+              Perfumer-Creator for the House of CHANEL.</p>
+            <div class="pt-[16px] flex desktop:pt-[22px] desktop:pl-[1px]">
+              <div class="newPrice text-[32px] mr-[20px] desktop:mr-[19px] desktop:mt-[-1px]">$149.99</div>
+              <div class="price text-[13px] mt-[14px] desktop:mt-[13px] line-through">$169.99</div>
+            </div>
+            <button class="btn rounded-lg mt-[11px] desktop:mt-[21px] h-[48px] w-full flex items-center justify-center">
+              <img class="" src="./images/icon-cart.svg" alt="Icon cart">
+              <span class="btn-text ml-[10px] text-[14px]">Add to Cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+  </main>
+</body>
+</html>
